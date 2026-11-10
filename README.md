@@ -27,7 +27,7 @@ All Phase 1 requirement analysis, workflow definitions, and technical architectu
 | **[`docs/requirements.md`](./docs/requirements.md)** | Problem statement, functional requirements (FR-1 to FR-7), non-functional requirements (security, usability, scalability, reliability), and MVP boundaries. |
 | **[`docs/user-roles.md`](./docs/user-roles.md)** | Detailed role specifications (*Startup Applicant*, *Government Reviewer*, *Administrator*), Role-Based Access Control (RBAC) matrix, and Mermaid Use-Case diagram. |
 | **[`docs/application-workflow.md`](./docs/application-workflow.md)** | Complete end-to-end registration lifecycle, state transition machine (`Draft` $\rightarrow$ `Submitted` $\rightarrow$ `Under Review` $\rightarrow$ `Query Raised` $\rightarrow$ `Resubmitted` $\rightarrow$ `Approved` / `Rejected`), and Mermaid workflow flowchart. |
-| **[`docs/tech-stack.md`](./docs/tech-stack.md)** | Selected technologies (Next.js, TypeScript, Tailwind CSS, PostgreSQL, Prisma ORM, NextAuth) and their architectural justifications. |
+| **[`docs/tech-stack.md`](./docs/tech-stack.md)** | Project stack: Vite, React, JavaScript, Express, PostgreSQL, and Prisma. |
 | **[`docs/architecture.md`](./docs/architecture.md)** | High-level 3-tier system architecture, component interactions, security model, and Mermaid architecture & sequence diagrams. |
 
 ---
@@ -63,10 +63,10 @@ stateDiagram-v2
 
 ## 💻 Technology Stack
 
-* **Frontend**: Next.js (App Router, React 19/18), Tailwind CSS, Shadcn UI / Radix primitives, Lucide Icons
-* **Backend**: Next.js API Routes & Server Actions, Zod (runtime schema validation)
-* **Database & ORM**: PostgreSQL (ACID-compliant relational DBMS), Prisma ORM (type-safe queries & migrations)
-* **Authentication & Security**: NextAuth.js / JWT, bcrypt password hashing, Role-Based Access Control (RBAC)
+* **Frontend**: Vite, React, JavaScript, Tailwind CSS, Lucide Icons
+* **Backend**: Node.js, Express, JavaScript (CommonJS), REST API
+* **Database & ORM**: PostgreSQL and Prisma ORM
+* **Authentication & Security**: To be implemented; server-side role checks and password hashing are required
 * **Document Storage**: Secure local/cloud storage with signed access URLs
 * **Documentation & Diagrams**: Markdown with native GitHub-rendered Mermaid.js diagrams
 
@@ -76,6 +76,8 @@ stateDiagram-v2
 
 ```text
 AYUSH-Startup-Registration-Portal/
+├── frontend/
+├── backend/
 ├── README.md
 └── docs/
     ├── requirements.md
